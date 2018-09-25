@@ -1,0 +1,64 @@
+TeamName    League   
+
+Baltimore Orioles    AL
+Boston Red Sox    AL
+California Angels    AL
+Chicago White Sox    AL
+Cleveland Indians    AL
+Detroit Tigers    AL
+Kansas City Royals    AL
+Milwaukee Brewers    AL
+Minnesota Twins    AL
+New York Yankees    AL
+Oakland Athletics    AL
+Seattle Mariners    AL
+Texas Rangers    AL
+Toronto Blue Jays    AL
+Atlanta Braves    NL
+Chicago Cubs    NL
+Cincinnati Reds    NL
+Colorado Rockies    NL
+Florida Marlins    NL
+Houston Astros    NL
+Los Angeles Dodgers    NL
+Montreal Expos    NL
+New York Mets    NL
+Philadelphia Phillies    NL
+Pittsburgh Pirates    NL
+San Diego Padres    NL
+San Francisco Giants    NL
+St. Louis Cardinals    NL
+************END**************
+
+TeamName    League   
+
+Atlanta Braves    NL
+Chicago Cubs    NL
+Cincinnati Reds    NL
+Colorado Rockies    NL
+Florida Marlins    NL
+Houston Astros    NL
+Los Angeles Dodgers    NL
+Montreal Expos    NL
+New York Mets    NL
+Philadelphia Phillies    NL
+Pittsburgh Pirates    NL
+San Diego Padres    NL
+San Francisco Giants    NL
+St. Louis Cardinals    NL
+Baltimore Orioles    AL
+Boston Red Sox    AL
+California Angels    AL
+Chicago White Sox    AL
+Cleveland Indians    AL
+Detroit Tigers    AL
+Kansas City Royals    AL
+Milwaukee Brewers    AL
+Minnesota Twins    AL
+New York Yankees    AL
+Oakland Athletics    AL
+Seattle Mariners    AL
+Texas Rangers    AL
+Toronto Blue Jays    AL
+************END**************
+

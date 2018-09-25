@@ -2565,6 +2565,1157 @@ void printISortedData(struct mlb_stats *teamStatsArr, int n, string field){
 
 }
 
+// Merges two subarrays of arr[]. 
+// First subarray is arr[l..m] 
+// Second subarray is arr[m+1..r] 
+void mergeIncOrderTeamAndLeague(struct mlb_stats* arr, string field, int l, int m, int r) 
+{ 
+    int i, j, k; 
+    int n1 = m - l + 1; 
+    int n2 =  r - m; 
+  
+    /* create temp arrays */
+    struct mlb_stats* L = new struct mlb_stats[n1];
+    struct mlb_stats* R = new struct mlb_stats[n2];
+  
+    
+    /* Copy data to temp arrays L[] and R[] */
+    for (i = 0; i < n1; i++) 
+        L[i] = arr[l + i]; 
+    for (j = 0; j < n2; j++) 
+        R[j] = arr[m + 1+ j]; 
+       
+  
+    /* Merge the temp arrays back into arr[l..r]*/
+    i = 0; // Initial index of first subarray 
+    j = 0; // Initial index of second subarray 
+    k = l; // Initial index of merged subarray 
+    while (i < n1 && j < n2) 
+    { 
+
+    	if(field == "Team"){
+    		if (strcmp(L[i].Team, R[j].Team)<0) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+    		
+		}
+		else if(field=="League"){
+			if (strcmp(L[i].League, R[j].League)<0) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+	        else if(strcmp(L[i].League, R[j].League)==0)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+		        }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+       
+    } 
+  
+    /* Copy the remaining elements of L[], if there 
+       are any */
+    while (i < n1) 
+    { 
+    	
+        arr[k] = L[i]; 
+        i++; 
+        k++; 
+    } 
+  
+    /* Copy the remaining elements of R[], if there 
+       are any */
+    while (j < n2) 
+    { 
+        arr[k] = R[j]; 
+        j++; 
+        k++; 
+    } 
+
+ delete[] L; 
+ delete[] R;
+
+}
+// Merges two subarrays of arr[]. 
+// First subarray is arr[l..m] 
+// Second subarray is arr[m+1..r] 
+void mergeDecOrderTeamAndLeague(struct mlb_stats* arr, string field, int l, int m, int r) 
+{ 
+    int i, j, k; 
+    int n1 = m - l + 1; 
+    int n2 =  r - m; 
+  
+    /* create temp arrays */
+    struct mlb_stats* L = new struct mlb_stats[n1];
+    struct mlb_stats* R = new struct mlb_stats[n2];
+  
+    
+    /* Copy data to temp arrays L[] and R[] */
+    for (i = 0; i < n1; i++) 
+        L[i] = arr[l + i]; 
+    for (j = 0; j < n2; j++) 
+        R[j] = arr[m + 1+ j]; 
+       
+  
+    /* Merge the temp arrays back into arr[l..r]*/
+    i = 0; // Initial index of first subarray 
+    j = 0; // Initial index of second subarray 
+    k = l; // Initial index of merged subarray 
+    while (i < n1 && j < n2) 
+    { 
+
+    	if(field == "Team"){
+    		if (strcmp(L[i].Team, R[j].Team)>0) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+    		
+		}
+		else if(field=="League"){
+			if (strcmp(L[i].League, R[j].League)>0) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+	        else if(strcmp(L[i].League, R[j].League)==0)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+		        }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+       
+    } 
+  
+    /* Copy the remaining elements of L[], if there 
+       are any */
+    while (i < n1) 
+    { 
+    	
+        arr[k] = L[i]; 
+        i++; 
+        k++; 
+    } 
+  
+    /* Copy the remaining elements of R[], if there 
+       are any */
+    while (j < n2) 
+    { 
+        arr[k] = R[j]; 
+        j++; 
+        k++; 
+    } 
+    delete[] L; 
+	delete[] R;
+}
+
+/************** This function takes the teamStatsArr as parameter which has team statstics for a given year and then 
+sorts it in increasing order by applying insertion sort algorithm on the given field (int and float). ***************/
+template <class T>
+// Merges two subarrays of arr[]. 
+// First subarray is arr[l..m] 
+// Second subarray is arr[m+1..r] 
+void mergeDecOrder(struct mlb_stats* arr, string field, int l, int m, int r) 
+{ 
+    int i, j, k; 
+    int n1 = m - l + 1; 
+    int n2 =  r - m; 
+  
+    /* create temp arrays */
+    struct mlb_stats* L = new struct mlb_stats[n1];
+    struct mlb_stats* R = new struct mlb_stats[n2];
+  
+    
+    /* Copy data to temp arrays L[] and R[] */
+    for (i = 0; i < n1; i++) 
+        L[i] = arr[l + i]; 
+    for (j = 0; j < n2; j++) 
+        R[j] = arr[m + 1+ j]; 
+       
+  
+    /* Merge the temp arrays back into arr[l..r]*/
+    i = 0; // Initial index of first subarray 
+    j = 0; // Initial index of second subarray 
+    k = l; // Initial index of merged subarray 
+    while (i < n1 && j < n2) 
+    { 
+
+    	if(field == "G"){
+    		if (L[i].G > R[j].G) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+	        else if(L[i].G == R[j].G)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+		        }
+	            else{
+		            arr[k] = R[j]; 
+		            j++;
+	            } 
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+    		
+		}
+		else if(field=="RBI"){
+			if (L[i].RBI >= R[j].RBI) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].RBI == R[j].RBI)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+		        }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+		        }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="AB"){
+			if (L[i].AB >= R[j].AB) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+            else if(L[i].AB == R[j].AB)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="R"){
+			if (L[i].R > R[j].R) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].R == R[j].R)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+		        }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="H"){
+			if (L[i].H > R[j].H) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+            else if(L[i].H == R[j].H)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+		        }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+		        }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="B2"){
+			if (L[i].B2 > R[j].B2) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+            else if(L[i].B2 == R[j].B2)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++;
+	            } 
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="B3"){
+			if (L[i].B3 > R[j].B3) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].B3 == R[j].B3)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++;
+	            } 
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="HR"){
+			if (L[i].HR > R[j].HR) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+            else if(L[i].HR == R[j].HR)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="BB"){
+			if (L[i].BB > R[j].BB) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+            else if(L[i].BB == R[j].BB)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="SO"){
+			if (L[i].SO > R[j].SO) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].SO == R[j].SO)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++;
+	            } 
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="SB"){
+			if (L[i].SB > R[j].SB) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+            else if(L[i].SB == R[j].SB)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="CS"){
+			if (L[i].CS > R[j].CS) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].CS == R[j].CS)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="AVG"){
+			if (L[i].AVG > R[j].AVG) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].AVG == R[j].AVG)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+		}
+		else if(field=="OBP"){
+			if (L[i].OBP > R[j].OBP) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].OBP == R[j].OBP)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+		}
+		else if(field=="SLG"){
+			if (L[i].SLG > R[j].SLG) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].SLG == R[j].SLG)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+		}
+		else if(field=="OPS"){
+			if (L[i].OPS > R[j].OPS) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].OPS == R[j].OPS)
+	        {
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+		}
+       
+    } 
+  
+    /* Copy the remaining elements of L[], if there 
+       are any */
+    while (i < n1) 
+    { 
+    	
+        arr[k] = L[i]; 
+        i++; 
+        k++; 
+    } 
+  
+    /* Copy the remaining elements of R[], if there 
+       are any */
+    while (j < n2) 
+    { 
+        arr[k] = R[j]; 
+        j++; 
+        k++; 
+    }
+	delete[] L; 
+	delete[] R; 
+
+} 
+
+/************** This function takes the teamStatsArr as parameter which has team statstics for a given year and then 
+sorts it in increasing order by applying insertion sort algorithm on the given field (int and float). ***************/
+template <class T>
+// Merges two subarrays of arr[]. 
+// First subarray is arr[l..m] 
+// Second subarray is arr[m+1..r] 
+void mergeIncOrder(struct mlb_stats* arr, string field, int l, int m, int r) 
+{ 
+    int i, j, k; 
+    int n1 = m - l + 1; 
+    int n2 =  r - m; 
+  
+    /* create temp arrays */
+    struct mlb_stats* L = new struct mlb_stats[n1];
+    struct mlb_stats* R = new struct mlb_stats[n2];
+  
+    
+    /* Copy data to temp arrays L[] and R[] */
+    for (i = 0; i < n1; i++) 
+        L[i] = arr[l + i]; 
+    for (j = 0; j < n2; j++) 
+        R[j] = arr[m + 1+ j]; 
+       
+  
+    /* Merge the temp arrays back into arr[l..r]*/
+    i = 0; // Initial index of first subarray 
+    j = 0; // Initial index of second subarray 
+    k = l; // Initial index of merged subarray 
+    while (i < n1 && j < n2) 
+    { 
+
+    	if(field == "G"){
+    		if (L[i].G < R[j].G) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+	        else if(L[i].G == R[j].G)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        }  
+	        k++; 
+    		
+		}
+		else if(field=="RBI"){
+			if (L[i].RBI < R[j].RBI) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+	        else if(L[i].RBI == R[j].RBI)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="AB"){
+			if (L[i].AB < R[j].AB) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+	        else if(L[i].AB == R[j].AB)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++;
+	            } 
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="R"){
+			if (L[i].R < R[j].R) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].R == R[j].R)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="H"){
+			if (L[i].H < R[j].H) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].H == R[j].H)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="B2"){
+			if (L[i].B2 < R[j].B2) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].B2 == R[j].B2)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++;
+	            }	 
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="B3"){
+			if (L[i].B3 < R[j].B3) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].B3 == R[j].B3)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="HR"){
+			if (L[i].HR < R[j].HR) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+            else if(L[i].HR == R[j].HR)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="BB"){
+			if (L[i].BB < R[j].BB) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].BB == R[j].BB)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="SO"){
+			if (L[i].SO < R[j].SO) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+            else if(L[i].SO == R[j].SO)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+		        }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="SB"){
+			if (L[i].SB < R[j].SB) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].SB == R[j].SB)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+		        }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="CS"){
+			if (L[i].CS < R[j].CS) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].CS == R[j].CS)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+			
+		}
+		else if(field=="AVG"){
+			if (L[i].AVG < R[j].AVG) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        } 
+            else if(L[i].AVG == R[j].AVG)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        }
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+		}
+		else if(field=="OBP"){
+			if (L[i].OBP < R[j].OBP) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].OBP == R[j].OBP)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+		}
+		else if(field=="SLG"){
+			if (L[i].SLG < R[j].SLG) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].SLG == R[j].SLG)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+	            }
+	            else{
+		            arr[k] = R[j]; 
+		            j++;
+	            } 
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+		}
+		else if(field=="OPS"){
+			if (L[i].OPS < R[j].OPS) 
+	        { 
+	            arr[k] = L[i]; 
+	            i++; 
+	        }
+            else if(L[i].OPS == R[j].OPS)
+	        { 
+	        	if(strcmp(L[i].Team,R[j].Team)<=0){
+		            arr[k] = L[i]; 
+		            i++;
+		        }
+	            else{
+		            arr[k] = R[j]; 
+		            j++; 
+	            }
+	        } 
+	        else
+	        { 
+	            arr[k] = R[j]; 
+	            j++; 
+	        } 
+	        k++; 
+		}
+       
+    } 
+  
+    /* Copy the remaining elements of L[], if there 
+       are any */
+    while (i < n1) 
+    { 
+
+        arr[k] = L[i]; 
+        i++; 
+        k++; 
+    } 
+  
+    /* Copy the remaining elements of R[], if there 
+       are any */
+    while (j < n2) 
+    { 
+        arr[k] = R[j]; 
+        j++; 
+        k++; 
+    } 
+    delete[] L; 
+	delete[] R;
+} 
+
+/************** This function calls mergeSortAlgo function depending on the field type using the template classes. ***************/
+void mergeSortAlgo(struct mlb_stats *teamStatsArr, string field, string order,int l, int r) 
+{ 
+    if (l < r) 
+    { 
+        // Same as (l+r)/2, but avoids overflow for 
+        // large l and h 
+        int m = l+(r-l)/2; 
+  
+        // Sort first and second halves 
+        mergeSortAlgo(teamStatsArr, field, order, l, m); 
+        mergeSortAlgo(teamStatsArr, field, order, m+1, r); 
+		// calling the function merge according to field type using template class T if order is increasing
+		if(order=="incr"){
+			if(field=="G"|| field=="AB" || field=="R" || field=="H"|| field=="B2"|| field=="B3"|| field=="HR" 
+				|| field=="RBI"|| field=="BB"|| field=="SO"|| field=="SB"|| field=="CS")
+				mergeIncOrder<int>(teamStatsArr,field, l, m, r);
+			else if(field=="AVG"|| field=="OBP" || field=="SLG" || field=="OPS" )
+				mergeIncOrder<float>(teamStatsArr,field, l, m, r);
+			else
+				mergeIncOrderTeamAndLeague(teamStatsArr,field, l, m, r);
+		}
+		// calling the function merge according to field type using template class T if order is decreasing
+		else{
+			if(field=="G"|| field=="AB" || field=="R" || field=="H"|| field=="B2"|| field=="B3"|| field=="HR" 
+				|| field=="RBI"|| field=="BB"|| field=="SO"|| field=="SB"|| field=="CS")
+				mergeDecOrder<int>(teamStatsArr,field, l, m, r);
+			else if(field=="AVG"|| field=="OBP" || field=="SLG" || field=="OPS" )
+				mergeDecOrder<float>(teamStatsArr,field, l, m, r);
+			else
+				mergeDecOrderTeamAndLeague(teamStatsArr,field, l, m, r);
+		}
+ 
+    } 
+} 
+
+/************** This function calls mergeSortAlgo function depending on the field type using the template classes. ***************/
+void mergeSort(struct yearData yearStatsObj, string year, string field, string order,int n){
+	int flag=0;
+	for(int i=0; i< n; i++){
+		if(yearStatsObj.annualStats[i].year==stoi(year)){
+			flag=1;
+			int teamLen = yearStatsObj.annualStats[i].no_teams;
+			int l=0;
+			int r=teamLen-1;
+			struct mlb_stats *teamStatsArr = yearStatsObj.annualStats[i].stats;
+			mergeSortAlgo(teamStatsArr,field,order,l,r);
+				// calling the print function to output the sorted team Stats Array for the given field.
+			printISortedData(teamStatsArr,teamLen,field);
+			}
+			else if(flag==1)
+				break;
+			// if the loop has reached to its end and no such given year if found then print: "No such year"
+			else if(i==n-1 && flag==0)
+				cout << "Error: no such year\n";
+	}
+
+}
+
+
 /************** This function calls insertionSortAlgo function depending on the field type using the template classes. ***************/
 void insertionSort(struct yearData yearStatsObj, string year, string field, string order,int n){
 	int flag=0;
@@ -3128,6 +4279,10 @@ int main(){
 		// call the ifind function if the variable func has ifid as input.s
 		else if(func=="ifind"){
 			ifind(yearStatsObj,year,field,order,n);
+		}
+		// call the merge sort function if the variable input range is empty.
+		if(func=="msort" && range==""){
+			mergeSort(yearStatsObj,year,field,order,n);
 		}
 	}
 	// deleting the dynamically allocate yearDataArr
