@@ -1,64 +1,109 @@
-TeamName    League   
+TeamName    RBI   Year
 
-Baltimore Orioles    AL
-Boston Red Sox    AL
-California Angels    AL
-Chicago White Sox    AL
-Cleveland Indians    AL
-Detroit Tigers    AL
-Kansas City Royals    AL
-Milwaukee Brewers    AL
-Minnesota Twins    AL
-New York Yankees    AL
-Oakland Athletics    AL
-Seattle Mariners    AL
-Texas Rangers    AL
-Toronto Blue Jays    AL
-Atlanta Braves    NL
-Chicago Cubs    NL
-Cincinnati Reds    NL
-Colorado Rockies    NL
-Florida Marlins    NL
-Houston Astros    NL
-Los Angeles Dodgers    NL
-Montreal Expos    NL
-New York Mets    NL
-Philadelphia Phillies    NL
-Pittsburgh Pirates    NL
-San Diego Padres    NL
-San Francisco Giants    NL
-St. Louis Cardinals    NL
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+    0    0
+Minnesota Twins    643    1999
+Florida Marlins    655    1999
+San Diego Padres    671    1999
+Anaheim Angels    673    1999
+Montreal Expos    680    1999
+Detroit Tigers    704    1999
+Chicago Cubs    717    1999
+Tampa Bay Devil Rays    728    1999
+Pittsburgh Pirates    735    1999
+Chicago White Sox    742    1999
+Los Angeles Dodgers    761    1999
+St. Louis Cardinals    763    1999
+Milwaukee Brewers    777    1999
+Houston Astros    784    1999
+Atlanta Braves    791    1999
+Philadelphia Phillies    797    1999
+Kansas City Royals    800    1999
+Baltimore Orioles    804    1999
+Boston Red Sox    808    1999
+New York Mets    814    1999
+Cincinnati Reds    820    1999
+Seattle Mariners    825    1999
+San Francisco Giants    828    1999
+Oakland Athletics    845    1999
+New York Yankees    855    1999
+Toronto Blue Jays    856    1999
+Colorado Rockies    863    1999
+Arizona Diamondbacks    865    1999
+Texas Rangers    897    1999
+Cleveland Indians    960    1999
 ************END**************
 
-TeamName    League   
+Field  Year  Median  TeamName  
+G    1999    162    Colorado Rockies
+************END**************
 
-Atlanta Braves    NL
-Chicago Cubs    NL
-Cincinnati Reds    NL
-Colorado Rockies    NL
-Florida Marlins    NL
-Houston Astros    NL
-Los Angeles Dodgers    NL
-Montreal Expos    NL
-New York Mets    NL
-Philadelphia Phillies    NL
-Pittsburgh Pirates    NL
-San Diego Padres    NL
-San Francisco Giants    NL
-St. Louis Cardinals    NL
-Baltimore Orioles    AL
-Boston Red Sox    AL
-California Angels    AL
-Chicago White Sox    AL
-Cleveland Indians    AL
-Detroit Tigers    AL
-Kansas City Royals    AL
-Milwaukee Brewers    AL
-Minnesota Twins    AL
-New York Yankees    AL
-Oakland Athletics    AL
-Seattle Mariners    AL
-Texas Rangers    AL
-Toronto Blue Jays    AL
+HR    1999    244    Seattle Mariners
+************END**************
+
+TeamName    B3   Year
+
+Kansas City Royals    52    1999
+Montreal Expos    47    1999
+Arizona Diamondbacks    46    1999
+Florida Marlins    44    1999
+Philadelphia Phillies    44    1999
+Boston Red Sox    42    1999
+Pittsburgh Pirates    40    1999
+Colorado Rockies    39    1999
+Chicago White Sox    37    1999
+Cincinnati Reds    37    1999
+New York Yankees    36    1999
+Chicago Cubs    35    1999
+Detroit Tigers    34    1999
+Cleveland Indians    32    1999
+Milwaukee Brewers    30    1999
+Minnesota Twins    30    1999
+Tampa Bay Devil Rays    29    1999
+Texas Rangers    29    1999
+St. Louis Cardinals    27    1999
+Atlanta Braves    23    1999
+Houston Astros    23    1999
+Los Angeles Dodgers    23    1999
+Anaheim Angels    22    1999
+San Diego Padres    22    1999
+Baltimore Orioles    21    1999
+Seattle Mariners    21    1999
+Oakland Athletics    20    1999
+San Francisco Giants    18    1999
+New York Mets    14    1999
+Toronto Blue Jays    14    1999
+************END**************
+
+Field  Year  Median  TeamName  
+G    1999    162    Colorado Rockies
 ************END**************
 
