@@ -1333,6 +1333,7 @@ void insertionSortWithRange(struct yearData yearStatsObj, string start_year, str
 	int flag=0;
 	int sumTeamLen=0;
 	int startYearIndex=0;
+	int endYearIndex=0;
 
 	// finds the index of the starting year and store it in variable called startYearIndex
 	for(int l=0; l< n; l++){
@@ -1341,6 +1342,9 @@ void insertionSortWithRange(struct yearData yearStatsObj, string start_year, str
 			sumTeamLen += yearStatsObj.annualStats[l].no_teams;
 			if(yearStatsObj.annualStats[l].year==stoi(start_year))
 				startYearIndex=l;
+			if(yearStatsObj.annualStats[l].year==stoi(end_year))
+				endYearIndex=l;
+			startYearIndex=min(startYearIndex,endYearIndex);
 		}
 		else if(l==n-1 && flag==0)
 			cout << "Error: no such year" << endl;
@@ -3657,7 +3661,7 @@ void mergeIncOrder(struct mlb_stats* arr, string field, int l, int m, int r)
 } 
 
 /************** This function calls mergeSortAlgo function depending on the field type using the template classes. ***************/
-void mergeSortAlgo(struct mlb_stats *teamStatsArr, string field, string order,int l, int r) 
+void mergeSortAlgo(struct mlb_stats *teamStatsArr, string field, string order, int l, int r) 
 { 
     if (l < r) 
     { 
@@ -4999,6 +5003,7 @@ void mergeSortWithRange(struct yearData yearStatsObj, string start_year, string 
 	int flag=0;
 	int sumTeamLen=0;
 	int startYearIndex=0;
+	int endYearIndex=0;
 
 	// finds the index of the starting year and store it in variable called startYearIndex
 	for(int l=0; l< n; l++){
@@ -5007,37 +5012,38 @@ void mergeSortWithRange(struct yearData yearStatsObj, string start_year, string 
 			sumTeamLen += yearStatsObj.annualStats[l].no_teams;
 			if(yearStatsObj.annualStats[l].year==stoi(start_year))
 				startYearIndex=l;
+			if(yearStatsObj.annualStats[l].year==stoi(end_year))
+				endYearIndex=l;
+			startYearIndex=min(startYearIndex,endYearIndex);
 		}
 		else if(l==n-1 && flag==0)
 			cout << "Error: no such year" << endl;
 		
 	}
 	if(flag==1){
-			int k=0;
-			int teamLen=0;
-			/**** dynamic memory allocation for yearArr and yearlyStatsArr with total team length (sum of no_teams from start to end year)
-			as size. ************/
-			int* yearArr = new int[sumTeamLen];
-			struct mlb_stats* yearlyStatsArr = new struct mlb_stats[sumTeamLen];
-			int range = stoi(end_year)-stoi(start_year)+1;
-			for(int i=startYearIndex; i< range+startYearIndex;i++){
-				teamLen = yearStatsObj.annualStats[i].no_teams;
-				// populating yearlyStatsArr and yearArr with data from yearStatsObj
-				for(int j=0; j< teamLen; j++){
-					yearlyStatsArr[k] = yearStatsObj.annualStats[i].stats[j];
-					yearArr[k] = yearStatsObj.annualStats[i].year;
-					k++;
-				}
+		int k=0;
+		int teamLen=0;
+		/**** dynamic memory allocation for yearArr and yearlyStatsArr with total team length (sum of no_teams from start to end year)
+		as size. ************/
+		int* yearArr = new int[sumTeamLen];
+		struct mlb_stats* yearlyStatsArr = new struct mlb_stats[sumTeamLen];
+		int range = stoi(end_year)-stoi(start_year)+1;
+		// cout << (range+startYearIndex);
+		for(int i=startYearIndex; i< range+startYearIndex;i++){
+			teamLen = yearStatsObj.annualStats[i].no_teams;
+			// populating yearlyStatsArr and yearArr with data from yearStatsObj
+			for(int j=0; j< teamLen; j++){
+				yearlyStatsArr[k] = yearStatsObj.annualStats[i].stats[j];
+				yearArr[k] = yearStatsObj.annualStats[i].year;
+				k++;
 			}
-			// struct mlb_stats *teamStatsArr = yearStatsObj.annualStats[i].stats;
-			mergeSortAlgoRange(yearlyStatsArr,field,order,0,sumTeamLen-1,yearArr);
-				// calling the print function to output the sorted team Stats Array for the given field.
-			// calling the print function to output the sorted yearlyStatsArr for the given field.
-			printIRangeSortedData(yearlyStatsArr,sumTeamLen,field,yearArr);
-
-			// deleting the dynamically allocated arrays 
-			delete[] yearArr;
-			delete[] yearlyStatsArr;
+		}
+		mergeSortAlgoRange(yearlyStatsArr,field,order,0,sumTeamLen-1,yearArr);
+		// calling the print function to output the sorted yearlyStatsArr for the given field.
+		printIRangeSortedData(yearlyStatsArr,sumTeamLen,field,yearArr);
+		// deleting the dynamically allocated arrays 
+		delete[] yearArr;
+		delete[] yearlyStatsArr;
 	}	
 	
 }

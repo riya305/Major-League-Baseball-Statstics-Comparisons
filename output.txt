@@ -1,106 +1,344 @@
 TeamName    RBI   Year
 
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
-    0    0
+Tampa Bay Devil Rays    579    1998
+Montreal Expos    602    1998
+Cincinnati Reds    612    1997
+Pittsburgh Pirates    613    1998
+Arizona Diamondbacks    621    1998
+Florida Marlins    621    1998
+Philadelphia Phillies    622    1997
+Toronto Blue Jays    627    1997
+Los Angeles Dodgers    630    1998
+Chicago Cubs    642    1997
+Milwaukee Brewers    643    1997
 Minnesota Twins    643    1999
+St. Louis Cardinals    654    1997
 Florida Marlins    655    1999
+Montreal Expos    659    1997
+Philadelphia Phillies    668    2000
+New York Mets    671    1998
 San Diego Padres    671    1999
+Philadelphia Phillies    672    1998
 Anaheim Angels    673    1999
+Milwaukee Brewers    673    1998
 Montreal Expos    680    1999
+Kansas City Royals    686    1998
+Pittsburgh Pirates    686    1997
+Detroit Tigers    691    1998
+Florida Marlins    691    2000
+Minnesota Twins    691    1998
+Tampa Bay Devil Rays    692    2000
+Florida Marlins    703    1997
 Detroit Tigers    704    1999
+Montreal Expos    705    2000
+Los Angeles Dodgers    706    1997
+Milwaukee Brewers    708    2000
+Kansas City Royals    711    1997
+Minnesota Twins    711    2000
+Oakland Athletics    714    1997
+San Diego Padres    714    2000
+San Diego Padres    715    1998
 Chicago Cubs    717    1999
+Houston Astros    720    1997
+Chicago Cubs    722    2000
+Cincinnati Reds    723    1998
 Tampa Bay Devil Rays    728    1999
+Minnesota Twins    730    1997
 Pittsburgh Pirates    735    1999
+Anaheim Angels    739    1998
+Chicago White Sox    740    1997
+New York Mets    741    1997
 Chicago White Sox    742    1999
+Detroit Tigers    743    1997
+San Francisco Giants    746    1997
+Pittsburgh Pirates    749    2000
+Baltimore Orioles    750    2000
+Atlanta Braves    755    1997
+Boston Red Sox    755    2000
+Oakland Athletics    755    1998
+Arizona Diamondbacks    756    2000
+Los Angeles Dodgers    756    2000
+Atlanta Braves    758    2000
 Los Angeles Dodgers    761    1999
+New York Mets    761    2000
+San Diego Padres    761    1997
 St. Louis Cardinals    763    1999
+Texas Rangers    773    1997
+Anaheim Angels    775    1997
+Toronto Blue Jays    776    1998
 Milwaukee Brewers    777    1999
+Baltimore Orioles    780    1997
+St. Louis Cardinals    781    1998
+Baltimore Orioles    783    1998
 Houston Astros    784    1999
+Detroit Tigers    785    2000
+Chicago Cubs    788    1998
 Atlanta Braves    791    1999
+Colorado Rockies    791    1998
+Atlanta Braves    794    1998
+Cincinnati Reds    794    2000
 Philadelphia Phillies    797    1999
 Kansas City Royals    800    1999
+San Francisco Giants    800    1998
 Baltimore Orioles    804    1999
+Chicago White Sox    806    1998
+Texas Rangers    806    2000
 Boston Red Sox    808    1999
+Boston Red Sox    810    1997
+Cleveland Indians    810    1997
+Cleveland Indians    811    1998
 New York Mets    814    1999
+Houston Astros    818    1998
 Cincinnati Reds    820    1999
+Seattle Mariners    822    1998
 Seattle Mariners    825    1999
+Toronto Blue Jays    826    2000
+Boston Red Sox    827    1998
 San Francisco Giants    828    1999
+Kansas City Royals    831    2000
+New York Yankees    833    2000
+Anaheim Angels    837    2000
+St. Louis Cardinals    841    2000
 Oakland Athletics    845    1999
+New York Yankees    846    1997
 New York Yankees    855    1999
 Toronto Blue Jays    856    1999
 Colorado Rockies    863    1999
 Arizona Diamondbacks    865    1999
+Colorado Rockies    869    1997
+Seattle Mariners    869    2000
+Cleveland Indians    889    2000
+San Francisco Giants    889    2000
+Seattle Mariners    890    1997
+Texas Rangers    894    1998
 Texas Rangers    897    1999
+Houston Astros    900    2000
+Colorado Rockies    905    2000
+New York Yankees    907    1998
+Oakland Athletics    908    2000
+Chicago White Sox    926    2000
 Cleveland Indians    960    1999
 ************END**************
 
-Field  Year  Median  TeamName  
-G    1999    162    Colorado Rockies
+TeamName    RBI   Year
+
+Cleveland Indians    960    1999
+Chicago White Sox    926    2000
+Oakland Athletics    908    2000
+New York Yankees    907    1998
+Colorado Rockies    905    2000
+Houston Astros    900    2000
+Texas Rangers    897    1999
+Texas Rangers    894    1998
+Seattle Mariners    890    1997
+Cleveland Indians    889    2000
+San Francisco Giants    889    2000
+Colorado Rockies    869    1997
+Seattle Mariners    869    2000
+Arizona Diamondbacks    865    1999
+Colorado Rockies    863    1999
+Toronto Blue Jays    856    1999
+New York Yankees    855    1999
+New York Yankees    846    1997
+Oakland Athletics    845    1999
+St. Louis Cardinals    841    2000
+Anaheim Angels    837    2000
+New York Yankees    833    2000
+Kansas City Royals    831    2000
+San Francisco Giants    828    1999
+Boston Red Sox    827    1998
+Toronto Blue Jays    826    2000
+Seattle Mariners    825    1999
+Seattle Mariners    822    1998
+Cincinnati Reds    820    1999
+Houston Astros    818    1998
+New York Mets    814    1999
+Cleveland Indians    811    1998
+Boston Red Sox    810    1997
+Cleveland Indians    810    1997
+Boston Red Sox    808    1999
+Chicago White Sox    806    1998
+Texas Rangers    806    2000
+Baltimore Orioles    804    1999
+Kansas City Royals    800    1999
+San Francisco Giants    800    1998
+Philadelphia Phillies    797    1999
+Atlanta Braves    794    1998
+Cincinnati Reds    794    2000
+Atlanta Braves    791    1999
+Colorado Rockies    791    1998
+Chicago Cubs    788    1998
+Detroit Tigers    785    2000
+Houston Astros    784    1999
+Baltimore Orioles    783    1998
+St. Louis Cardinals    781    1998
+Baltimore Orioles    780    1997
+Milwaukee Brewers    777    1999
+Toronto Blue Jays    776    1998
+Anaheim Angels    775    1997
+Texas Rangers    773    1997
+St. Louis Cardinals    763    1999
+Los Angeles Dodgers    761    1999
+New York Mets    761    2000
+San Diego Padres    761    1997
+Atlanta Braves    758    2000
+Arizona Diamondbacks    756    2000
+Los Angeles Dodgers    756    2000
+Atlanta Braves    755    1997
+Boston Red Sox    755    2000
+Oakland Athletics    755    1998
+Baltimore Orioles    750    2000
+Pittsburgh Pirates    749    2000
+San Francisco Giants    746    1997
+Detroit Tigers    743    1997
+Chicago White Sox    742    1999
+New York Mets    741    1997
+Chicago White Sox    740    1997
+Anaheim Angels    739    1998
+Pittsburgh Pirates    735    1999
+Minnesota Twins    730    1997
+Tampa Bay Devil Rays    728    1999
+Cincinnati Reds    723    1998
+Chicago Cubs    722    2000
+Houston Astros    720    1997
+Chicago Cubs    717    1999
+San Diego Padres    715    1998
+Oakland Athletics    714    1997
+San Diego Padres    714    2000
+Kansas City Royals    711    1997
+Minnesota Twins    711    2000
+Milwaukee Brewers    708    2000
+Los Angeles Dodgers    706    1997
+Montreal Expos    705    2000
+Detroit Tigers    704    1999
+Florida Marlins    703    1997
+Tampa Bay Devil Rays    692    2000
+Detroit Tigers    691    1998
+Florida Marlins    691    2000
+Minnesota Twins    691    1998
+Kansas City Royals    686    1998
+Pittsburgh Pirates    686    1997
+Montreal Expos    680    1999
+Anaheim Angels    673    1999
+Milwaukee Brewers    673    1998
+Philadelphia Phillies    672    1998
+New York Mets    671    1998
+San Diego Padres    671    1999
+Philadelphia Phillies    668    2000
+Montreal Expos    659    1997
+Florida Marlins    655    1999
+St. Louis Cardinals    654    1997
+Milwaukee Brewers    643    1997
+Minnesota Twins    643    1999
+Chicago Cubs    642    1997
+Los Angeles Dodgers    630    1998
+Toronto Blue Jays    627    1997
+Philadelphia Phillies    622    1997
+Arizona Diamondbacks    621    1998
+Florida Marlins    621    1998
+Pittsburgh Pirates    613    1998
+Cincinnati Reds    612    1997
+Montreal Expos    602    1998
+Tampa Bay Devil Rays    579    1998
 ************END**************
 
-HR    1999    244    Seattle Mariners
+Field  Year  Median  TeamName  
+G    1998    162    Milwaukee Brewers
+************END**************
+
+HR    1998    234    Seattle Mariners
 ************END**************
 
 TeamName    B3   Year
 
 Kansas City Royals    52    1999
+Pittsburgh Pirates    52    1997
 Montreal Expos    47    1999
 Arizona Diamondbacks    46    1999
+Arizona Diamondbacks    46    1998
 Florida Marlins    44    1999
 Philadelphia Phillies    44    1999
+Tampa Bay Devil Rays    43    1998
 Boston Red Sox    42    1999
+Toronto Blue Jays    41    1997
+Colorado Rockies    40    1997
+Houston Astros    40    1997
+Kansas City Royals    40    1998
+Minnesota Twins    40    1997
 Pittsburgh Pirates    40    1999
+Chicago Cubs    39    1997
 Colorado Rockies    39    1999
+St. Louis Cardinals    39    1997
+Chicago White Sox    38    1998
+Atlanta Braves    37    1997
 Chicago White Sox    37    1999
 Cincinnati Reds    37    1999
+San Francisco Giants    37    1997
+Colorado Rockies    36    1998
+Florida Marlins    36    1998
 New York Yankees    36    1999
+Philadelphia Phillies    36    1998
+Boston Red Sox    35    1998
 Chicago Cubs    35    1999
+Kansas City Royals    35    1997
+Philadelphia Phillies    35    1997
+Pittsburgh Pirates    35    1998
+Chicago Cubs    34    1998
 Detroit Tigers    34    1999
+Montreal Expos    34    1997
+Los Angeles Dodgers    33    1997
+Boston Red Sox    32    1997
 Cleveland Indians    32    1999
+Detroit Tigers    32    1997
+Minnesota Twins    32    1998
+Montreal Expos    32    1998
+Texas Rangers    32    1998
+New York Yankees    31    1998
+Cleveland Indians    30    1998
 Milwaukee Brewers    30    1999
 Minnesota Twins    30    1999
+San Diego Padres    30    1998
+St. Louis Cardinals    30    1998
+Detroit Tigers    29    1998
 Tampa Bay Devil Rays    29    1999
 Texas Rangers    29    1999
+Chicago White Sox    28    1997
+Cincinnati Reds    28    1998
+Florida Marlins    28    1997
+Houston Astros    28    1998
+New York Mets    28    1997
+Seattle Mariners    28    1998
+Anaheim Angels    27    1998
+Cincinnati Reds    27    1997
+Los Angeles Dodgers    27    1998
+Milwaukee Brewers    27    1997
 St. Louis Cardinals    27    1999
+Texas Rangers    27    1997
+Atlanta Braves    26    1998
+San Francisco Giants    26    1998
+Anaheim Angels    25    1997
+New York Mets    24    1998
 Atlanta Braves    23    1999
 Houston Astros    23    1999
 Los Angeles Dodgers    23    1999
+New York Yankees    23    1997
+Oakland Athletics    23    1997
 Anaheim Angels    22    1999
+Baltimore Orioles    22    1997
+Cleveland Indians    22    1997
 San Diego Padres    22    1999
 Baltimore Orioles    21    1999
 Seattle Mariners    21    1999
+Seattle Mariners    21    1997
 Oakland Athletics    20    1999
+Toronto Blue Jays    19    1998
 San Francisco Giants    18    1999
+Milwaukee Brewers    17    1998
+San Diego Padres    16    1997
 New York Mets    14    1999
 Toronto Blue Jays    14    1999
+Oakland Athletics    13    1998
+Baltimore Orioles    11    1998
 ************END**************
 
 Field  Year  Median  TeamName  
